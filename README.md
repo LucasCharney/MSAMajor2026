@@ -3,7 +3,7 @@ This repo will contain Python programs from the MSA major
 
 ## Programming Topics
 - Variables
--Decision Statements
+- Decision Statements
 - Iteration
 - Functions
 - File Handling
