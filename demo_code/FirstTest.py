@@ -37,4 +37,4 @@ number_1 = "5"
 number_2 = "7"
 total = number_1 + number_2 
 print(f"Total: {total}")
-# write a python statement to display 
+# write a python statement to display
