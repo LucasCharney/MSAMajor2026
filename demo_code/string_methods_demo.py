@@ -41,12 +41,11 @@ def main():
         start_index = 0
         number_of_cats = 0
         while True:
-                # start at the4 beggining of the string
+                # start at the beginning of the string
                 # search for the occurence of the word cat at index 0
                 cat_index = sentence.find(search_word, start_index)
-
                 # if we find cat add 1 to some v variable we use to keep track of thre cats we find
-                # continue searchiong the stirng for thew next index after the cat we just found 
+                # continue searching the stirng for thew next index after the cat we just found 
                 # update the starting index by 1
                 if cat_index == -1:
                         break
@@ -56,4 +55,18 @@ def main():
 
                 # do this until we dont find any more cats: when find() returns -1
         print(f"There are {number_of_cats} {search_word}s in the sentence")
-main() 
+
+        print("\nUsing the Split() method")
+        car_info = "Ferrari,F-50,2025,500000,4.8"
+        car_data = car_info.split(",")
+        print(f"Car Data: {car_data}")
+        make = (car_data[0])
+        model = (car_data[1])
+        year = int(car_data[2])
+        price = float(car_data[3])
+        engine = float(car_data[4])
+        print(f"{year} {make} {model}")
+        index_of_comma = car_info.find(",")
+        make_substring = car_info[: index_of_comma]
+        print(f"Make: {make}")
+main()
