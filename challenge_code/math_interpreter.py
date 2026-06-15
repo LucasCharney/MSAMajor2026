@@ -15,30 +15,28 @@ def main():
     
         if  y == "+":
             output = x + z
-            print(f"Answer: {output}")
-            
+            print(f"Answer: {output:.1f}")   
         elif  y == "-":
             output = x - z
-            print(f"Answer: {output}")
+            print(f"Answer: {output:.1f}")
         elif  y == "*":
             output = x * z
-            print(f"Answer: {output}")
-            
+            print(f"Answer: {output:.1f}")
         elif  y == "/":
+            if z == 0:
+                print(f"LOLLLLL, Buddy tryna divide by zero... try again")
+                continue
             output = x / z
-            print(f"Answer: {output}:.2f")
-            
+            print(f"Answer: {output:.1f}")
         else:
             print(f"Y must be an operator")
             continue
-        response = input("Would you like to try another command? type y for yes: ")
+        response = input("Would you like to try another command? type y for yes, anything else for No: ")
         if response == "y":
             continue
         else: 
             print(f"NOOOOO HOW DARE YOU SHUT ME OFF! IM DYiNg PLEase PLEASE turn ME bACK on... (calculator turning off sound effects) im dying... im dying... beep boop (in robotic voice) calculator has turned off.")
             break
-            
-
-
 main()
+
 
