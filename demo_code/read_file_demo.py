@@ -10,7 +10,11 @@ def main():
     for line_of_data in data_file:
         item_name_and_price = line_of_data.split(",")
         print(item_name_and_price)
-
-
+        item_name = item_name_and_price[0]
+        item_price = float(item_name_and_price[1])
+        menu_items[item_name] = item_price
+    data_file.close()
+    for items, price in menu_items.items():
+        print(f"{items}: ${price}")
 
 main()
