@@ -13,22 +13,22 @@ class Student():
     def get_last_name(self):
         return self.__last_name
     
-    def set_first_name(self, new_first_name:str):
-                self.__GPA = new_first_name
+    def set_last_name(self, new_last_name:str):
+                self.__last_name = new_last_name
                 return
     
     def get_first_name(self):
         return self.__first_name
     
     def set_first_name(self, new_first_name:str):
-                self.__GPA = new_first_name
+                self.__first_name = new_first_name
                 return
     
     def get_major(self):
         return self.__major
     
     def set_major(self, new_major:str):
-        self.__GPA = new_major
+        self.__major = new_major
         return
     
     def get_credit_hours(self):
