@@ -17,19 +17,38 @@ output: list of student dictionaries that mathc the search criteria
 def search_dictionary_list(search_key, search_value):
     student_list = []
     for student in sg.get_student_dictionaries():
-        if search_key == search_value:
-        student_list += student
+        if student[search_key].lower() == search_value.lower():
+            student_list.append(student)
+    return student_list
 
 
 @app.route('/', methods=['GET'])
 def index():
     return "<h1>Student Data API</h1>"
+
 #cretae a route  to return all student data 
 @app.route('/api/students/all', methods = ['GET'])
-# run the application
 def api_all():
     #get student sictionaries
     student_dictionaries = sg.get_student_dictionaries()
     return jsonify(student_dictionaries)
+
+@app.route('/api/major/<string:major>', methods =['GET'])
+def api_students_by_major(major:str):
+    # call the search function to get students with this major
+    major_students = search_dictionary_list("major",major)
+    return jsonify(major_students)
+
+@app.route('/api/class/<string:student_class>', methods = ['GET'])
+def api_students_by_class(student_class:str):
+    class_students = search_dictionary_list("class", student_class)
+    return jsonify(class_students)
+     
+@app.route('/api/student/id/<string:id>', methods=['GET'])
+def api_get_students_by_id(id:str):
+    id = search_dictionary_list("class", id)
+    return jsonify(id)
+
+
 
 app.run(debug = True)
