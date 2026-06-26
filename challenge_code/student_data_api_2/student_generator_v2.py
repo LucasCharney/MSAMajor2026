@@ -1,4 +1,13 @@
+
 from Student import Student
+from datetime import datetime
+
+def write_to_error_log(message:str) -> None:
+    the_date = datetime.now()
+    with open("error_log.txt", "a") as log_file:
+        log_file.write(f"{the_date}: {message}\n")
+
+    return
 
 def load_students(filename:str) -> list[Student]:
     #open menu.txt: create file handler to open file in read mode
@@ -8,23 +17,27 @@ def load_students(filename:str) -> list[Student]:
     #use a loop to open file line by line
     #get the item and price from the list
     # close the file 
+    line_number = 0
     for line_of_data in data_file:
         student = line_of_data.split(",")
+        line_number +=1
         try:
             if len(student) !=6:
-                raise Exception(f"Error on line {line_of_data} of the file. data has {len(student)} items, but should have 6")
-        except:
+                write_to_error_log(f"Error on line {line_number} of the file. data has {len(student)} items, but should have 6.")
+                raise Exception(f"Error on line {line_number} of the file. data has {len(student)} items, but should have 6\n")
+        except Exception as error:
             continue
         try:
             information=Student(student[0],student[1],student[2],int(student[3]),float(student[4]),int(student[5])) 
         except:
+            write_to_error_log(f"Error on line {line_of_data} of the file. Incorrect data types")
             continue
         kids += [information]
     data_file.close()
     return kids
 
 """
-Function to convert strudentobjects into student dictionaries
+Function to convert student objects into student dictionaries
 inputL:list of student objects
 output:list of student dictionaries
 """

@@ -1,0 +1,26 @@
+2026-06-26 10:11:41.303123: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. data has 6 items, but should have 6
+2026-06-26 10:11:42.605042: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. data has 6 items, but should have 6
+2026-06-26 10:11:43.779656: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. data has 6 items, but should have 6
+2026-06-26 10:14:12.069199: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. Incorrect data types
+2026-06-26 10:14:12.071083: Error on line Holly,Uttridge,Accounting,88,3.06153605
+ of the file. data has 5 items, but should have 6.
+2026-06-26 10:14:12.071083: Error on line Alan,Moran,Accounting,5o,3.19171552
+ of the file. data has 5 items, but should have 6.
+2026-06-26 10:14:13.428172: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. Incorrect data types
+2026-06-26 10:14:13.429180: Error on line Holly,Uttridge,Accounting,88,3.06153605
+ of the file. data has 5 items, but should have 6.
+2026-06-26 10:14:13.429180: Error on line Alan,Moran,Accounting,5o,3.19171552
+ of the file. data has 5 items, but should have 6.
+2026-06-26 10:16:39.343022: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. Incorrect data types
+2026-06-26 10:16:39.343022: Error on line 2 of the file. data has 5 items, but should have 6.
+2026-06-26 10:16:39.343022: Error on line 3 of the file. data has 5 items, but should have 6.
+2026-06-26 10:16:39.343022: Error on line first_name,last_name,major,credit_hours,gpa,student_id
+ of the file. Incorrect data types
+2026-06-26 10:16:39.343022: Error on line 2 of the file. data has 5 items, but should have 6.
+2026-06-26 10:16:39.343022: Error on line 3 of the file. data has 5 items, but should have 6.
