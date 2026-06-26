@@ -31,4 +31,22 @@ def majors_get():
     url = "http://127.0.0.1:5000/api/majors/all"
     major_list = get_student_data(url)
     return render_template('majors.html', major_list=major_list)
+
+@app.route('/majors', methods=['POST'])
+def majors_post():
+    url = "http://127.0.0.1:5000/api/majors/all"
+    #get the list of majors
+    major_list = get_student_data(url)
+    #get the form data
+    major = request.form.get('major')
+
+    if major == "":
+        flash("ERROR: You must select a major")
+        return redirect(url_for('majors_get'))
+    # create a url to get students from that major
+    url = f"http://127.0.0.1:5000/api/major/{major}"
+    # get the response after sending it
+    result_list = get_student_data(url)
+    #send all the data to the majors template to be displayed in the browser
+    return render_template('majors.html', major_list =major_list, result_list=result_list, major=major)
 app.run(port=5001)
